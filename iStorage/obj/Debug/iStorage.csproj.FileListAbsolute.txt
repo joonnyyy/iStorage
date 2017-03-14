@@ -1,0 +1,14 @@
+C:\Users\DSC\Documents\Visual Studio 2015\Projects\csharpProjects\iStorage\iStorage\bin\Debug\iStorage.exe.config
+C:\Users\DSC\Documents\Visual Studio 2015\Projects\csharpProjects\iStorage\iStorage\bin\Debug\iStorage.exe
+C:\Users\DSC\Documents\Visual Studio 2015\Projects\csharpProjects\iStorage\iStorage\bin\Debug\iStorage.pdb
+C:\Users\DSC\Documents\Visual Studio 2015\Projects\csharpProjects\iStorage\iStorage\obj\Debug\iStorage.csprojResolveAssemblyReference.cache
+C:\Users\DSC\Documents\Visual Studio 2015\Projects\csharpProjects\iStorage\iStorage\obj\Debug\MainWindow.g.cs
+C:\Users\DSC\Documents\Visual Studio 2015\Projects\csharpProjects\iStorage\iStorage\obj\Debug\App.g.cs
+C:\Users\DSC\Documents\Visual Studio 2015\Projects\csharpProjects\iStorage\iStorage\obj\Debug\iStorage_MarkupCompile.cache
+C:\Users\DSC\Documents\Visual Studio 2015\Projects\csharpProjects\iStorage\iStorage\obj\Debug\iStorage_MarkupCompile.lref
+C:\Users\DSC\Documents\Visual Studio 2015\Projects\csharpProjects\iStorage\iStorage\obj\Debug\MainWindow.baml
+C:\Users\DSC\Documents\Visual Studio 2015\Projects\csharpProjects\iStorage\iStorage\obj\Debug\iStorage.g.resources
+C:\Users\DSC\Documents\Visual Studio 2015\Projects\csharpProjects\iStorage\iStorage\obj\Debug\iStorage.Properties.Resources.resources
+C:\Users\DSC\Documents\Visual Studio 2015\Projects\csharpProjects\iStorage\iStorage\obj\Debug\iStorage.csproj.GenerateResource.Cache
+C:\Users\DSC\Documents\Visual Studio 2015\Projects\csharpProjects\iStorage\iStorage\obj\Debug\iStorage.exe
+C:\Users\DSC\Documents\Visual Studio 2015\Projects\csharpProjects\iStorage\iStorage\obj\Debug\iStorage.pdb
