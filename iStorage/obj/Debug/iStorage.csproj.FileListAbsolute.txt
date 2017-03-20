@@ -12,3 +12,6 @@ C:\Users\DSC\Documents\Visual Studio 2015\Projects\csharpProjects\iStorage\iStor
 C:\Users\DSC\Documents\Visual Studio 2015\Projects\csharpProjects\iStorage\iStorage\obj\Debug\iStorage.csproj.GenerateResource.Cache
 C:\Users\DSC\Documents\Visual Studio 2015\Projects\csharpProjects\iStorage\iStorage\obj\Debug\iStorage.exe
 C:\Users\DSC\Documents\Visual Studio 2015\Projects\csharpProjects\iStorage\iStorage\obj\Debug\iStorage.pdb
+C:\Users\DSC\Documents\Visual Studio 2015\Projects\csharpProjects\iStorage\iStorage\obj\Debug\iStorage_Content.g.cs
+C:\Users\DSC\Documents\Visual Studio 2015\Projects\csharpProjects\iStorage\iStorage\bin\Debug\Data\storage.mdf
+C:\Users\DSC\Documents\Visual Studio 2015\Projects\csharpProjects\iStorage\iStorage\bin\Debug\Data\storage_log.ldf
