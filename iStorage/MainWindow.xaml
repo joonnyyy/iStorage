@@ -6,4 +6,5 @@
         xmlns:local="clr-namespace:iStorage"
         mc:Ignorable="d"
         Title="iStorage" Height="350" Width="525">
+    <Label x:Name="label" Content="Label" HorizontalAlignment="Left" Margin="363,114,0,0" VerticalAlignment="Top"/>
 </Window>

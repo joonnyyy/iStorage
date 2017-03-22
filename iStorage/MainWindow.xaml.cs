@@ -20,14 +20,15 @@ namespace iStorage
     /// </summary>
     public partial class MainWindow : Window
     {
+        BackendAPI API = new BackendAPI();
         public MainWindow()
         {
             InitializeComponent();
+            label.Content = API.Login("Test", "Pass");
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-           
-        }
+        
+        
+
     }
 }
