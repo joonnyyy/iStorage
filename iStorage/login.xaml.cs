@@ -15,49 +15,13 @@ using System.Windows.Shapes;
 namespace iStorage
 {
     /// <summary>
-    /// Interaction logic for login.xaml
+    /// Interaction logic for Login.xaml
     /// </summary>
-    /// 
-    public partial class login : Window
+    public partial class Login : Window
     {
-
-        string Pw, Bn;
-        ForMembers Staff = new ForMembers();
-        Error Bad = new Error();
-
-        public login()
+        public Login()
         {
             InitializeComponent();
         }
-
-
-        private void Text_UserName_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            Bn = Text_UserName.Text;
-        }
-
-        private void Text_Password_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            
-        }
-
-        private void Button_Login_Click(object sender, RoutedEventArgs e)
-        {
-            if(Bn == "admin")
-            {
-                this.Close();
-                Staff.Show();
-            }
-
-            else
-            {
-                Error Bad = new Error();
-                Bad.Show();
-            }
-
-
-        }
-
-
     }
 }
