@@ -49,3 +49,5 @@ C:\Users\Jonny\Source\Repos\iStorage\iStorage\obj\Debug\iStorage.Properties.Reso
 C:\Users\Jonny\Source\Repos\iStorage\iStorage\obj\Debug\iStorage.csproj.GenerateResource.Cache
 C:\Users\Jonny\Source\Repos\iStorage\iStorage\obj\Debug\iStorage.exe
 C:\Users\Jonny\Source\Repos\iStorage\iStorage\obj\Debug\iStorage.pdb
+C:\Users\Jonny\Source\Repos\iStorage\iStorage\obj\Debug\Member.g.cs
+C:\Users\Jonny\Source\Repos\iStorage\iStorage\obj\Debug\Member.baml
