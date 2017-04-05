@@ -28,6 +28,42 @@ namespace iStorage
 
         }
 
+
+        public user_select()
+        {
+
+        }
+
+
+        public user_update()
+        {
+
+        }
+
+
+        public GF_connect()
+        {
+
+        }
+
+        public GF_selelect()
+        {
+
+        }
+
+
+        public GF_change()
+        {
+
+        }
+
+
+        public GF_order()
+        {
+
+        }
+
+
         public String Login(String user, String pass)
         {
             SqlCommand compareLogin = new SqlCommand("SELECT Manager, Username FROM users WHERE Username="+user+" AND Password="+pass);
