@@ -49,3 +49,6 @@ C:\Users\Jonny\Source\Repos\iStorage\iStorage\obj\Debug\iStorage.Properties.Reso
 C:\Users\Jonny\Source\Repos\iStorage\iStorage\obj\Debug\iStorage.csproj.GenerateResource.Cache
 C:\Users\Jonny\Source\Repos\iStorage\iStorage\obj\Debug\iStorage.exe
 C:\Users\Jonny\Source\Repos\iStorage\iStorage\obj\Debug\iStorage.pdb
+C:\Users\eric\Source\Repos\iStorage\iStorage\bin\Debug\iStorage.exe.config
+C:\Users\eric\Source\Repos\iStorage\iStorage\obj\Debug\iStorage.exe
+C:\Users\eric\Source\Repos\iStorage\iStorage\obj\Debug\iStorage.pdb
