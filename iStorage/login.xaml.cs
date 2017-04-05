@@ -19,19 +19,21 @@ namespace iStorage
     /// </summary>
     public partial class Login : Window
     {
+
+        BackendAPI API = new BackendAPI();
+
         public Login()
         {
             InitializeComponent();
         }
 
-        private void Username_Input_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
         private void Button_Login_Click(object sender, RoutedEventArgs e)
         {
-
+            string input_user = Username_Input.Text;
+            string input_password = passwordBox.Password;
+            Username_Input.Text = "";
+            passwordBox.Password = "";
+            Username_Input.Text = API.Login(input_user, input_password);
         }
     }
 }

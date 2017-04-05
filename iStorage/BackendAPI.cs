@@ -9,13 +9,18 @@ namespace iStorage
 {
     class BackendAPI
     {
-        SqlConnection SQLConnection = new SqlConnection("Server=(LocalDb)\\v11.0;Initial Catalog=storage;Integrated Security=SSPI;Trusted_Connection=yes;");
+        string _DATAPATH;
+        SqlConnection _CONNECTION;
+        SqlCommand _COMMAND;
 
         public BackendAPI()
         {
             try
             {
-                SQLConnection.Open();
+                _DATAPATH = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + "\\Data\\storage.mdf";
+                _CONNECTION = new SqlConnection("Server=(LocalDb)\\MSSQLLocalDB;AttachDbFilename="+ _DATAPATH +";Initial Catalog=storage;Integrated Security=SSPI;Trusted_Connection=yes;");
+                _COMMAND = new SqlCommand();
+                _COMMAND.Connection = _CONNECTION;
             }
             catch (Exception e)
             {
@@ -23,59 +28,34 @@ namespace iStorage
             }
         }
 
-        //public user_connect()
-        //{
-
-        //}
-
-
-        public user_select()
-        {
-
-        }
-
-
-        public user_update()
-        {
-
-        }
-
-
-        public GF_connect()
-        {
-
-        }
-
-        public GF_selelect()
-        {
-
-        }
-
-
-        public GF_change()
-        {
-
-        }
-
-
-        public GF_order()
-        {
-
-        }
-
-
         public String Login(String user, String pass)
         {
-            SqlCommand compareLogin = new SqlCommand("SELECT Manager, Username FROM users WHERE Username="+user+" AND Password="+pass);
-            if(compareLogin.ExecuteNonQuery() == 1)
+            _COMMAND.CommandText = "SELECT user, manager FROM users WHERE username='"+ user +"' AND password='"+ pass +"'";
+            _CONNECTION.Open();
+            using (SqlDataReader reader = _COMMAND.ExecuteReader())
             {
-                return "true";
-            }else if (compareLogin.ExecuteNonQuery() == 0)
-            {
-                return "false";
+                try
+                {
+                    if (reader.HasRows)
+                    {
+                        _CONNECTION.Close();
+                        return "loggedin";
+                    }
+                    else
+                    {
+                        _CONNECTION.Close();
+                        return "wrong";
+                    }
+                }
+                catch(Exception e)
+                {
+                    _CONNECTION.Close();
+                    return "<Error: "+ e.Message +">";
+                }
+                
             }
-            return "Error";
         }
+
 
     }
 }
