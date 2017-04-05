@@ -23,5 +23,15 @@ namespace iStorage
         {
             InitializeComponent();
         }
+
+        private void Username_Input_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Button_Login_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

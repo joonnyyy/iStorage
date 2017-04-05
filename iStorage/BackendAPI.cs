@@ -23,10 +23,10 @@ namespace iStorage
             }
         }
 
-        public user_connect()
-        {
+        //public user_connect()
+        //{
 
-        }
+        //}
 
         public String Login(String user, String pass)
         {
