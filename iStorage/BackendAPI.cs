@@ -23,6 +23,11 @@ namespace iStorage
             }
         }
 
+        public user_connect()
+        {
+
+        }
+
         public String Login(String user, String pass)
         {
             SqlCommand compareLogin = new SqlCommand("SELECT Manager, Username FROM users WHERE Username="+user+" AND Password="+pass);
