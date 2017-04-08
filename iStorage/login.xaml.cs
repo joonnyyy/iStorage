@@ -50,6 +50,8 @@ namespace iStorage
                 Username_Input.IsEnabled = true;
                 Password_Input.IsEnabled = true;
                 Username_Input.Text = Answer_API_Login;
+                Username_Input.Focus();
+                Username_Input.SelectAll();
             }
         }
     }
