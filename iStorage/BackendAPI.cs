@@ -15,9 +15,8 @@ namespace iStorage
         private string _FILEPATH = "storage.mdf";
         private string _DATABASE = "storage";
         private string _DATAPATH;
+        private string _CONNECTIONSTRING;
         private SqlConnection _CONNECTION;
-        private SqlCommand _COMMAND;
-
 
         /// <summary>
         /// Calls class internal function that creates an instance of the BackendAPI and intializes the variablese for database connection.
@@ -76,9 +75,7 @@ namespace iStorage
                 if(filepath != "" )_FILEPATH = filepath;
                 if(table != "")_DATABASE = table;
                 _DATAPATH = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + "\\Data\\" + _FILEPATH;
-                _CONNECTION = new SqlConnection("Server=" + _SERVER + ";AttachDbFilename=" + _DATAPATH + ";Initial Catalog=" + _DATABASE + ";Integrated Security=SSPI;Trusted_Connection=yes;");
-                _COMMAND = new SqlCommand();
-                _COMMAND.Connection = _CONNECTION;
+                _CONNECTIONSTRING = "Server=" + _SERVER + ";AttachDbFilename=" + _DATAPATH + ";Initial Catalog=" + _DATABASE + ";Integrated Security=SSPI;Trusted_Connection=yes;";
             }
             catch (Exception e)
             {
@@ -92,26 +89,24 @@ namespace iStorage
         /// <exception cref="BackendConnectionException"></exception>
         public String Login(String user, String pass)
         {
-            _COMMAND.CommandText = "SELECT user, manager FROM users WHERE username='"+ user +"' AND password='"+ pass +"'";
-            using (_CONNECTION)
+            string Return;
+
+            using (_CONNECTION = new SqlConnection(_CONNECTIONSTRING))
             {
                 try
                 {
                     _CONNECTION.Open();
-                    using (SqlDataReader reader = _COMMAND.ExecuteReader())
+                    using (SqlCommand _COMMAND = new SqlCommand("SELECT user, manager FROM users WHERE username='" + user + "' AND password='" + pass + "'", _CONNECTION))
                     {
-
-                        if (reader.HasRows)
+                        using (SqlDataReader reader = _COMMAND.ExecuteReader())
                         {
-                            return "loggedin";
+                            if (reader.HasRows)
+                                Return = "loggedin";
+                            else
+                                Return = "wrong";
                         }
-                        else
-                        {
-                            return "wrong";
-                        }
-
-
                     }
+                    return Return;
                 }
                 catch (Exception e)
                 {
@@ -123,35 +118,35 @@ namespace iStorage
         /// <summary>
         /// Returns all rows from articles, selecting columns id,amount,name,price_sell,category,material 
         /// </summary>
-        /// <param name="rows">Returns the number of rows retrieved</param>
+        /// <param name="Rows">Returns the number of rows retrieved</param>
         /// <exception cref="BackendConnectionException"></exception>
-        public List<List<String>> AllArticlesLimitedInfo(out int rows)
+        public List<List<String>> AllArticlesLimitedInfo(out int Rows)
         {
-            _COMMAND.CommandText = "SELECT id,amount,name,price_sell,category,material FROM articles";
+            List<List<String>> Data = new List<List<String>>();
+            Rows = 0;
 
-
-            using (_CONNECTION)
+            using (_CONNECTION = new SqlConnection(_CONNECTIONSTRING))
             {
                 try
                 {
                     _CONNECTION.Open();
-                    List<List<String>> data = new List<List<String>>();
-
-                    using (SqlDataReader reader = _COMMAND.ExecuteReader())
+                    using (SqlCommand _COMMAND = new SqlCommand("SELECT id,amount,name,price_sell,category,material FROM articles", _CONNECTION))
                     {
-                        rows = 0;
-                        while (reader.Read())
+                        using (SqlDataReader reader = _COMMAND.ExecuteReader())
                         {
-                           List<String> temp = new List<String>();
-                           for(int column = 0; column < 6; column++)
+                            while (reader.Read())
                             {
-                                temp.Add(reader.GetValue(column).ToString());
+                                List<String> temp = new List<String>();
+                                for (int column = 0; column < 6; column++)
+                                {
+                                    temp.Add(reader.GetValue(column).ToString());
+                                }
+                                Data.Add(temp);
+                                Rows++;
                             }
-                            data.Add(temp);
-                            rows++;
                         }
                     }
-                    return data;
+                        return Data;
                 }
                 catch (Exception e)
                 {
