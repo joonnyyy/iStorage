@@ -21,8 +21,8 @@
         <Label x:Name="User_label" Content="Benutzername" HorizontalAlignment="Left" Margin="27,64,0,177" VerticalAlignment="Center" Width="149" Height="30" FontSize="20" FontWeight="Bold" Foreground="Black"/>
         <TextBox x:Name="Username_Input" HorizontalAlignment="Left" Height="24" Margin="26,99,0,148" TextWrapping="Wrap" VerticalAlignment="Center" Width="150" BorderBrush="Black" FontSize="16" Background="Transparent" BorderThickness="2"/>
         <Label x:Name="Pwd_label" Content="Passwort" HorizontalAlignment="Left" Margin="27,136,0,105" VerticalAlignment="Center" Width="149" Height="30" FontSize="20" FontWeight="Bold"/>
-        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="26,171,0,78" VerticalAlignment="Center" Width="150" Height="22" Background="Transparent" BorderBrush="Black" BorderThickness="2"/>
-        <Button x:Name="Button_Login" Content="Login" HorizontalAlignment="Left" Margin="86,220,0,0" VerticalAlignment="Top" Width="322" Height="27" IsEnabled="True" Background="Transparent" BorderThickness="2" BorderBrush="Black" Click="Button_Login_Click"/>
+        <PasswordBox x:Name="Password_Input" HorizontalAlignment="Left" Margin="26,171,0,78" VerticalAlignment="Center" Width="150" Height="22" Background="Transparent" BorderBrush="Black" BorderThickness="2"/>
+        <Button x:Name="Login_Button" Content="Login" HorizontalAlignment="Left" Margin="86,220,0,0" VerticalAlignment="Top" Width="322" Height="27" IsEnabled="True" Background="Transparent" BorderThickness="2" BorderBrush="Black" Click="Login_Button_Clicked"/>
 
     </Grid>
 </Window>
