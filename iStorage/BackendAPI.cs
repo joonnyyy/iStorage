@@ -118,35 +118,109 @@ namespace iStorage
         /// <summary>
         /// Returns all rows from articles, selecting columns id,amount,name,price_sell,category,material 
         /// </summary>
-        /// <param name="Rows">Returns the number of rows retrieved</param>
+        /// <param name="rows">Returns the number of rows retrieved</param>
         /// <exception cref="BackendConnectionException"></exception>
-        public List<List<String>> AllArticlesLimitedInfo(out int Rows)
+        public List<List<String>> GetFromArticles(out int rows)
         {
             List<List<String>> Data = new List<List<String>>();
-            Rows = 0;
+            rows = 0;
+            return Data = GetFromArticles("SELECT id,amount,name,price_sell,category,material","",out rows);
+        }
+
+        /// <summary>
+        /// Returns all rows from articles, selecting what SELECT field1,field2,field3 String you give in the selectstatement parameter
+        /// </summary>
+        /// <param name="rows">Returns the number of rows retrieved</param>
+        /// <exception cref="BackendConnectionException"></exception>
+        public List<List<String>> GetFromArticles(string select,out int rows)
+        {
+            List<List<String>> Data = new List<List<String>>();
+            rows = 0;
+            return Data = GetFromArticles(select,"", out rows);
+        }
+
+        /// <summary>
+        /// Returns all rows from articles, selecting what field1,field2,field3 and condition String you give in the selectstatement and wherestatement parameter
+        /// </summary>
+        /// <param name="rows">Returns the number of rows retrieved</param>
+        /// <exception cref="BackendConnectionException"></exception>
+        public List<List<String>> GetFromArticles(string select,string condition, out int rows)
+        {
+            List<List<String>> Data = new List<List<String>>();
+            rows = 0;
+            if(condition != "")
+            {
+                string temp = condition;
+                condition = "WHERE" + temp;
+            }
 
             using (_CONNECTION = new SqlConnection(_CONNECTIONSTRING))
             {
                 try
                 {
                     _CONNECTION.Open();
-                    using (SqlCommand _COMMAND = new SqlCommand("SELECT id,amount,name,price_sell,category,material FROM articles", _CONNECTION))
+                    using (SqlCommand _COMMAND = new SqlCommand("SELECT"+ select +"FROM articles"+ condition, _CONNECTION))
                     {
                         using (SqlDataReader reader = _COMMAND.ExecuteReader())
                         {
                             while (reader.Read())
                             {
                                 List<String> temp = new List<String>();
-                                for (int column = 0; column < 6; column++)
+                                for (int column = 0; column < reader.FieldCount; column++)
                                 {
                                     temp.Add(reader.GetValue(column).ToString());
                                 }
                                 Data.Add(temp);
-                                Rows++;
+                                rows++;
                             }
                         }
                     }
-                        return Data;
+                    return Data;
+                }
+                catch (Exception e)
+                {
+                    throw new BackendConnectionException("SQL Read failed: " + e.Message);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Returns rows from a table, selecting what SELECT field1,field2,field3 
+        /// </summary>
+        /// <param name="rows">Returns the number of rows retrieved</param>
+        /// <exception cref="BackendConnectionException"></exception>
+        public List<List<String>> GetFromDatabase(string select,string table, string condition, out int rows)
+        {
+            List<List<String>> Data = new List<List<String>>();
+            rows = 0;
+            if (condition != "")
+            {
+                string temp = condition;
+                condition = "WHERE" + temp;
+            }
+
+            using (_CONNECTION = new SqlConnection(_CONNECTIONSTRING))
+            {
+                try
+                {
+                    _CONNECTION.Open();
+                    using (SqlCommand _COMMAND = new SqlCommand("SELECT"+ select +"FROM"+ table + condition, _CONNECTION))
+                    {
+                        using (SqlDataReader reader = _COMMAND.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                List<String> temp = new List<String>();
+                                for (int column = 0; column < reader.FieldCount; column++)
+                                {
+                                    temp.Add(reader.GetValue(column).ToString());
+                                }
+                                Data.Add(temp);
+                                rows++;
+                            }
+                        }
+                    }
+                    return Data;
                 }
                 catch (Exception e)
                 {

@@ -19,7 +19,7 @@ namespace iStorage
             int rows;
 
             //Erstelle eine Liste mit Inhalt Liste von String, Lade Daten aus der Datenbank und füge sie ein
-            List<List<String>> data = API.AllArticlesLimitedInfo(out rows);
+            List<List<String>> data = API.GetFromArticles(out rows);
 
             //Gib aus wieviele Reihen geladen wurden
             Console.WriteLine("Starting output of {0} rows.", rows);
