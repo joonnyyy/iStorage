@@ -122,9 +122,8 @@ namespace iStorage
         /// <exception cref="BackendConnectionException"></exception>
         public List<List<String>> GetFromArticles(out int rows)
         {
-            List<List<String>> Data = new List<List<String>>();
             rows = 0;
-            return Data = GetFromArticles("SELECT id,amount,name,price_sell,category,material","",out rows);
+            return GetFromArticles("id,amount,name,price_sell,category,material","",out rows);
         }
 
         /// <summary>
@@ -134,9 +133,8 @@ namespace iStorage
         /// <exception cref="BackendConnectionException"></exception>
         public List<List<String>> GetFromArticles(string select,out int rows)
         {
-            List<List<String>> Data = new List<List<String>>();
             rows = 0;
-            return Data = GetFromArticles(select,"", out rows);
+            return GetFromArticles(select,"", out rows);
         }
 
         /// <summary>
@@ -146,42 +144,8 @@ namespace iStorage
         /// <exception cref="BackendConnectionException"></exception>
         public List<List<String>> GetFromArticles(string select,string condition, out int rows)
         {
-            List<List<String>> Data = new List<List<String>>();
             rows = 0;
-            if(condition != "")
-            {
-                string temp = condition;
-                condition = "WHERE" + temp;
-            }
-
-            using (_CONNECTION = new SqlConnection(_CONNECTIONSTRING))
-            {
-                try
-                {
-                    _CONNECTION.Open();
-                    using (SqlCommand _COMMAND = new SqlCommand("SELECT"+ select +"FROM articles"+ condition, _CONNECTION))
-                    {
-                        using (SqlDataReader reader = _COMMAND.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                List<String> temp = new List<String>();
-                                for (int column = 0; column < reader.FieldCount; column++)
-                                {
-                                    temp.Add(reader.GetValue(column).ToString());
-                                }
-                                Data.Add(temp);
-                                rows++;
-                            }
-                        }
-                    }
-                    return Data;
-                }
-                catch (Exception e)
-                {
-                    throw new BackendConnectionException("SQL Read failed: " + e.Message);
-                }
-            }
+            return GetFromDatabase(select,"articles", condition, out rows);
         }
 
         /// <summary>
@@ -196,7 +160,7 @@ namespace iStorage
             if (condition != "")
             {
                 string temp = condition;
-                condition = "WHERE" + temp;
+                condition = " WHERE " + temp;
             }
 
             using (_CONNECTION = new SqlConnection(_CONNECTIONSTRING))
@@ -204,7 +168,7 @@ namespace iStorage
                 try
                 {
                     _CONNECTION.Open();
-                    using (SqlCommand _COMMAND = new SqlCommand("SELECT"+ select +"FROM"+ table + condition, _CONNECTION))
+                    using (SqlCommand _COMMAND = new SqlCommand("SELECT "+ select +" FROM "+ table + condition, _CONNECTION))
                     {
                         using (SqlDataReader reader = _COMMAND.ExecuteReader())
                         {
