@@ -12,6 +12,70 @@ C:\Users\DSC\Documents\Visual Studio 2015\Projects\csharpProjects\iStorage\iStor
 C:\Users\DSC\Documents\Visual Studio 2015\Projects\csharpProjects\iStorage\iStorage\obj\Debug\iStorage.csproj.GenerateResource.Cache
 C:\Users\DSC\Documents\Visual Studio 2015\Projects\csharpProjects\iStorage\iStorage\obj\Debug\iStorage.exe
 C:\Users\DSC\Documents\Visual Studio 2015\Projects\csharpProjects\iStorage\iStorage\obj\Debug\iStorage.pdb
+<<<<<<< HEAD
 C:\Users\Admin\Source\Repos\iStorage\iStorage\bin\Debug\iStorage.exe.config
 C:\Users\Admin\Source\Repos\iStorage\iStorage\obj\Debug\iStorage.exe
 C:\Users\Admin\Source\Repos\iStorage\iStorage\obj\Debug\iStorage.pdb
+=======
+C:\Users\DSC\Documents\Visual Studio 2015\Projects\csharpProjects\iStorage\iStorage\obj\Debug\iStorage_Content.g.cs
+C:\Users\DSC\Documents\Visual Studio 2015\Projects\csharpProjects\iStorage\iStorage\bin\Debug\Data\storage.mdf
+C:\Users\DSC\Documents\Visual Studio 2015\Projects\csharpProjects\iStorage\iStorage\bin\Debug\Data\storage_log.ldf
+C:\Users\dsc\Documents\Visual Studio 2017\Projects\iStorage\iStorage\bin\Debug\Data\storage.mdf
+C:\Users\dsc\Documents\Visual Studio 2017\Projects\iStorage\iStorage\bin\Debug\Data\storage_log.ldf
+C:\Users\dsc\Documents\Visual Studio 2017\Projects\iStorage\iStorage\bin\Debug\iStorage.exe.config
+C:\Users\dsc\Documents\Visual Studio 2017\Projects\iStorage\iStorage\bin\Debug\iStorage.exe
+C:\Users\dsc\Documents\Visual Studio 2017\Projects\iStorage\iStorage\bin\Debug\iStorage.pdb
+C:\Users\dsc\Documents\Visual Studio 2017\Projects\iStorage\iStorage\obj\Debug\iStorage.csprojResolveAssemblyReference.cache
+C:\Users\dsc\Documents\Visual Studio 2017\Projects\iStorage\iStorage\obj\Debug\MainWindow.g.cs
+C:\Users\dsc\Documents\Visual Studio 2017\Projects\iStorage\iStorage\obj\Debug\App.g.cs
+C:\Users\dsc\Documents\Visual Studio 2017\Projects\iStorage\iStorage\obj\Debug\iStorage_Content.g.cs
+C:\Users\dsc\Documents\Visual Studio 2017\Projects\iStorage\iStorage\obj\Debug\iStorage_MarkupCompile.cache
+C:\Users\dsc\Documents\Visual Studio 2017\Projects\iStorage\iStorage\obj\Debug\iStorage_MarkupCompile.lref
+C:\Users\dsc\Documents\Visual Studio 2017\Projects\iStorage\iStorage\obj\Debug\MainWindow.baml
+C:\Users\dsc\Documents\Visual Studio 2017\Projects\iStorage\iStorage\obj\Debug\iStorage.g.resources
+C:\Users\dsc\Documents\Visual Studio 2017\Projects\iStorage\iStorage\obj\Debug\iStorage.Properties.Resources.resources
+C:\Users\dsc\Documents\Visual Studio 2017\Projects\iStorage\iStorage\obj\Debug\iStorage.csproj.GenerateResource.Cache
+C:\Users\dsc\Documents\Visual Studio 2017\Projects\iStorage\iStorage\obj\Debug\iStorage.exe
+C:\Users\dsc\Documents\Visual Studio 2017\Projects\iStorage\iStorage\obj\Debug\iStorage.pdb
+C:\Users\Jonny\Source\Repos\iStorage\iStorage\bin\Debug\Data\storage.mdf
+C:\Users\Jonny\Source\Repos\iStorage\iStorage\bin\Debug\Data\storage_log.ldf
+C:\Users\Jonny\Source\Repos\iStorage\iStorage\bin\Debug\iStorage.exe.config
+C:\Users\Jonny\Source\Repos\iStorage\iStorage\bin\Debug\iStorage.exe
+C:\Users\Jonny\Source\Repos\iStorage\iStorage\bin\Debug\iStorage.pdb
+C:\Users\Jonny\Source\Repos\iStorage\iStorage\obj\Debug\iStorage.csprojResolveAssemblyReference.cache
+C:\Users\Jonny\Source\Repos\iStorage\iStorage\obj\Debug\Login.g.cs
+C:\Users\Jonny\Source\Repos\iStorage\iStorage\obj\Debug\App.g.cs
+C:\Users\Jonny\Source\Repos\iStorage\iStorage\obj\Debug\iStorage_Content.g.cs
+C:\Users\Jonny\Source\Repos\iStorage\iStorage\obj\Debug\iStorage_MarkupCompile.cache
+C:\Users\Jonny\Source\Repos\iStorage\iStorage\obj\Debug\iStorage_MarkupCompile.lref
+C:\Users\Jonny\Source\Repos\iStorage\iStorage\obj\Debug\Login.baml
+C:\Users\Jonny\Source\Repos\iStorage\iStorage\obj\Debug\iStorage.g.resources
+C:\Users\Jonny\Source\Repos\iStorage\iStorage\obj\Debug\iStorage.Properties.Resources.resources
+C:\Users\Jonny\Source\Repos\iStorage\iStorage\obj\Debug\iStorage.csproj.GenerateResource.Cache
+C:\Users\Jonny\Source\Repos\iStorage\iStorage\obj\Debug\iStorage.exe
+C:\Users\Jonny\Source\Repos\iStorage\iStorage\obj\Debug\iStorage.pdb
+C:\Users\eric\Source\Repos\iStorage\iStorage\bin\Debug\iStorage.exe.config
+C:\Users\eric\Source\Repos\iStorage\iStorage\obj\Debug\iStorage.exe
+C:\Users\eric\Source\Repos\iStorage\iStorage\obj\Debug\iStorage.pdb
+C:\Users\Jonny\Source\Repos\iStorage\iStorage\obj\Debug\Member.g.cs
+C:\Users\Jonny\Source\Repos\iStorage\iStorage\obj\Debug\Member.baml
+C:\Users\dsc\Source\Repos\iStorage\iStorage\bin\Debug\Data\storage.mdf
+C:\Users\dsc\Source\Repos\iStorage\iStorage\bin\Debug\Data\storage_log.ldf
+C:\Users\dsc\Source\Repos\iStorage\iStorage\bin\Debug\iStorage.exe.config
+C:\Users\dsc\Source\Repos\iStorage\iStorage\bin\Debug\iStorage.exe
+C:\Users\dsc\Source\Repos\iStorage\iStorage\bin\Debug\iStorage.pdb
+C:\Users\dsc\Source\Repos\iStorage\iStorage\obj\Debug\iStorage.csprojResolveAssemblyReference.cache
+C:\Users\dsc\Source\Repos\iStorage\iStorage\obj\Debug\Login.g.cs
+C:\Users\dsc\Source\Repos\iStorage\iStorage\obj\Debug\Member.g.cs
+C:\Users\dsc\Source\Repos\iStorage\iStorage\obj\Debug\App.g.cs
+C:\Users\dsc\Source\Repos\iStorage\iStorage\obj\Debug\iStorage_Content.g.cs
+C:\Users\dsc\Source\Repos\iStorage\iStorage\obj\Debug\iStorage_MarkupCompile.cache
+C:\Users\dsc\Source\Repos\iStorage\iStorage\obj\Debug\iStorage_MarkupCompile.lref
+C:\Users\dsc\Source\Repos\iStorage\iStorage\obj\Debug\Login.baml
+C:\Users\dsc\Source\Repos\iStorage\iStorage\obj\Debug\Member.baml
+C:\Users\dsc\Source\Repos\iStorage\iStorage\obj\Debug\iStorage.g.resources
+C:\Users\dsc\Source\Repos\iStorage\iStorage\obj\Debug\iStorage.Properties.Resources.resources
+C:\Users\dsc\Source\Repos\iStorage\iStorage\obj\Debug\iStorage.csproj.GenerateResource.Cache
+C:\Users\dsc\Source\Repos\iStorage\iStorage\obj\Debug\iStorage.exe
+C:\Users\dsc\Source\Repos\iStorage\iStorage\obj\Debug\iStorage.pdb
+>>>>>>> origin/develop

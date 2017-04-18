@@ -10,6 +10,7 @@ none
 false
 DEBUG;TRACE
 C:\Users\DSC\Source\Repos\iStorage\iStorage\App.xaml
+<<<<<<< HEAD
 11151548125
 
 9-455653205
@@ -17,4 +18,13 @@ C:\Users\DSC\Source\Repos\iStorage\iStorage\App.xaml
 MainWindow.xaml;
 
 True
+=======
+2-1599586851
+21829122045
+11486299356
+13738642453
+Login.xaml;Member.xaml;
+
+False
+>>>>>>> origin/develop
 

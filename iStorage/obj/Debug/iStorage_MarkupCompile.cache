@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿iStorage
 
 
@@ -18,3 +19,25 @@ MainWindow.xaml;
 
 False
 
+=======
+﻿iStorage
+
+
+winexe
+C#
+.cs
+C:\Users\DSC\Source\Repos\iStorage\iStorage\obj\Debug\
+iStorage
+none
+false
+DEBUG;TRACE
+C:\Users\DSC\Source\Repos\iStorage\iStorage\App.xaml
+2-1599586851
+21829122045
+7-1075793941
+13738642453
+Login.xaml;Member.xaml;
+
+False
+
+>>>>>>> origin/develop
